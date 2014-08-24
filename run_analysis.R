@@ -24,4 +24,3 @@ for (i in 1:nrow(total_data3)) {
 
 total_data4 <- melt(total_data3,id.vars=c("Subject_ID","Activity"))
 total_data5 <- dcast(total_data4,Subject_ID + Activity ~ variable,mean)
-write.table(total_data5, "movement_data.txt", sep="\t", row.name=FALSE)
