@@ -9,7 +9,12 @@
 
 5. Here is a line-by-line commentary on how run_analysis.R transforms the original data set:
 
+    Text1
+    ``` 
     test_data = read.table("test/x_test.txt")
+    ```
+    Text2
+    ```
     train_data = read.table("train/x_train.txt")
     total_data <- rbind(test_data,train_data)
     labels = read.table("features.txt")
@@ -35,3 +40,4 @@
     
     total_data4 <- melt(total_data3,id.vars=c("Subject_ID","Activity"))
     total_data5 <- dcast(total_data4,Subject_ID + Activity ~ variable,mean)
+    ```
